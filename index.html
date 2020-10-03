@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Copies</title>
+  </head>
+  <body>
+    <script>
+      const items = ["Banana", "orange", "Apple", "Mango"];
+      const ratings = [92, 56, 4, 2, 22, 45.6, 10, 80];
+
+      const games = [
+        { title: "Mass Effect", rating: 9.5 },
+        { title: "League of Legends", rating: 5 },
+        { title: "Last of Us", rating: 10 },
+        { title: "God of war", rating: 10 },
+        { title: "WWE 2k20", rating: 4 },
+      ];
+
+      // gets a copy instead of changing the original
+      const descRating = [...ratings]; // gets copy
+      descRating.sort((a, b) => b - a); // sorts copy
+      console.log(descRating);
+
+      console.log(ratings); // shows that ofiginal is not changed
+
+      const name = "developedByed";
+      // const letters = name.split(""); // normal way
+      const letters = [...name];
+      console.log(letters);
+      //
+      const names = ["ed", "you"];
+      const otherNames = ["john", "bohn", "jovi"];
+
+      //   const allNames = names.concat(otherNames);
+      //   const allNames = [...names, ...ot?herNames];// with spread operator
+      const allNames = ['this is', 'ed', ...otherNames];
+
+      console.log(allNames);
+    </script>
+  </body>
+</html>
